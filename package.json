@@ -1,5 +1,5 @@
 {
-    "name": "vue-context-menu",
+    "name": "@lqzh/vue-context-menu-popup",
     "version": "2.0.0",
     "description": "Vue context menu",
     "keywords": [
@@ -10,7 +10,7 @@
     "main": "index.js",
     "scripts": {
         "test": "vue-cli-service serve ./test/main.js",
-        "build": "vue-cli-service build --target lib index.js"
+        "build": "vue-cli-service build --target lib -name vue-context-menu index.js"
     },
     "repository": {
         "type": "git",
