@@ -12,17 +12,12 @@ Vue 原生实现右键菜单组件, 零依赖
 
 ![sample](screenshots/sample.png)
 
-# 在线演示
-
--   [事件演示](https://codepen.io/laziji/pen/vYEZebK)
--   [简单复制粘贴演示](https://codepen.io/laziji/pen/povWLYq)
-
 # 快速安装
 
 ## npm 安装
 
 ```
-npm install vue-context-menu
+npm i @lqzh/vue-context-menu
 ```
 
 ## CDN
