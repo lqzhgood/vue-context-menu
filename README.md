@@ -1,7 +1,7 @@
 # 致谢
 
 原始代码来源于 `https://github.com/GitHub-Laziji/menujs` <br/>
-源库年久失修, 故 fork 后重构,取名 vue-context-menu 以作区分
+源库年久失修, 故 fork 后重构 
 
 # Vue ContextMenu
 
