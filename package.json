@@ -9,7 +9,7 @@
     ],
     "main": "index.js",
     "scripts": {
-        "test": "vue-cli-service serve ./test/main.js",
+        "dev": "vue-cli-service serve ./test/main.js",
         "build": "vue-cli-service build --target lib -name vue-context-menu index.js",
         "push": "npm version patch && npm publish"
     },

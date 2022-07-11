@@ -46,10 +46,10 @@ export default {
 		mouseListening: false,
 	}),
 	methods: {
-		async mousewheelListener() {
-			await this.close();
+		mousewheelListener() {
+			this.close();
 		},
-		async mouseDownListener(e) {
+		mouseDownListener(e) {
 			let el = e.target;
 			const menus = getElementsByClassName(this.$style.menu);
 			// eslint-disable-next-line no-loop-func
@@ -57,10 +57,10 @@ export default {
 				el = el.parentElement;
 			}
 			if (!menus.find(m => m === el)) {
-				await this.close();
+				this.close();
 			}
 		},
-		async mouseClickListener(e) {
+		mouseClickListener(e) {
 			let el = e.target;
 			const menus = getElementsByClassName(this.$style.menu);
 			const menuItems = getElementsByClassName(this.$style.menu_item);
@@ -74,11 +74,11 @@ export default {
 				if (e.button !== 0 || unClickableMenuItems.find(m => m === el)) {
 					return;
 				}
-				await this.close();
+				this.close();
 				return;
 			}
 			if (!menus.find(m => m === el)) {
-				await this.close();
+				this.close();
 			}
 		},
 		addListener() {
@@ -97,10 +97,11 @@ export default {
 				this.mouseListening = false;
 			}
 		},
-		async close() {
+		close() {
 			this.removeListener();
 			if (this.mainMenuInstance) {
-				await this.mainMenuInstance.close();
+				this.mainMenuInstance.close();
+				this.mainMenuInstance = null;
 			}
 			this.$destroy();
 			if (this.$el.parentNode) {

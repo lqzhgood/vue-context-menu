@@ -26,7 +26,7 @@ function install(v) {
     };
     ContextmenuProxy.destroy = function () {
         if (lastInstance) {
-            lastInstance.$destroy();
+            lastInstance.close();
             lastInstance = null;
         }
     };

@@ -45,11 +45,7 @@ import {
 } from '../constant';
 export default {
 	name: COMPONENT_NAME,
-	async mounted() {
-		this.visible = true;
-
-		await this.$nextTick();
-
+	mounted() {
 		const windowWidth = document.documentElement.clientWidth;
 		const windowHeight = document.documentElement.clientHeight;
 		const menu = this.$refs.menu;
@@ -99,7 +95,7 @@ export default {
 			minWidth: 150,
 		},
 		customClass: null,
-		visible: false,
+		visible: true, // 默认打开
 		openTrend: SUBMENU_OPEN_TREND_RIGHT,
 	}),
 	computed: {
@@ -135,7 +131,7 @@ export default {
 				}
 			}
 		},
-		async enterItem(e, item, index) {
+		enterItem(e, item, index) {
 			if (!this.visible) {
 				return;
 			}
@@ -143,7 +139,7 @@ export default {
 				if (this.activeSubmenu.index === index) {
 					return;
 				} else {
-					await this.activeSubmenu.instance.close();
+					this.activeSubmenu.instance.close();
 					this.activeSubmenu.instance = null;
 					this.activeSubmenu.index = null;
 				}
@@ -181,12 +177,13 @@ export default {
 				return;
 			}
 		},
-		async close() {
-			this.visible = false;
+		close() {
 			if (this.activeSubmenu.instance) {
-				await this.activeSubmenu.instance.close();
+				this.activeSubmenu.instance.close();
+				this.activeSubmenu.instance = null;
+				this.activeSubmenu.index = null;
 			}
-			await this.$nextTick();
+			this.visible = false;
 			this.$destroy();
 			if (this.$el.parentNode) {
 				this.$el.parentNode.removeChild(this.$el);
