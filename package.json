@@ -1,0 +1,29 @@
+{
+    "name": "vue-context-menu",
+    "version": "2.0.0",
+    "description": "Vue context menu",
+    "keywords": [
+        "Vue",
+        "Context Menu",
+        "右键菜单"
+    ],
+    "main": "index.js",
+    "scripts": {
+        "test": "vue-cli-service serve ./test/main.js",
+        "build": "vue-cli-service build --target lib index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lqzhgood/vue-context-menu.git"
+    },
+    "author": "lqzh",
+    "license": "GPLv3",
+    "bugs": {
+        "url": "https://github.com/lqzhgood/vue-context-menu/issues"
+    },
+    "homepage": "https://github.com/lqzhgood/vue-context-menu#readme",
+    "devDependencies": {
+        "@vue/cli-service": "^5.0.8",
+        "vue": "^2.7.4"
+    }
+}
