@@ -1,4 +1,4 @@
-<template>
+ <template>
 	<div></div>
 </template>
 
@@ -103,6 +103,9 @@ export default {
 				await this.mainMenuInstance.close();
 			}
 			this.$destroy();
+			if (this.$el.parentNode) {
+				this.$el.parentNode.removeChild(this.$el);
+			}
 		},
 	},
 };

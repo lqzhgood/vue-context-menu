@@ -188,6 +188,9 @@ export default {
 			}
 			await this.$nextTick();
 			this.$destroy();
+			if (this.$el.parentNode) {
+				this.$el.parentNode.removeChild(this.$el);
+			}
 		},
 	},
 };
