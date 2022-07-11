@@ -33,7 +33,7 @@ CDN 引入则不需要 `Vue.use(Contextmenu)`
 > 测试中使用的是`element-ui`图标
 
 ```js
-import Contextmenu from 'vue-context-menu';
+import Contextmenu from '@lqzh/vue-context-menu';
 Vue.use(Contextmenu);
 
 // 在组件中调用显示菜单
